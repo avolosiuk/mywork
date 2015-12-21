@@ -1,7 +1,7 @@
 package files;
 
 public class Directory {
-    public static void main(String[] args ) {
-}
-    File f1;
+   public Text text;
+   public Image image;
+    public Audio audio;
 }
