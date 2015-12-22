@@ -8,7 +8,7 @@ public class Areas {
     double RadiusR;
 
 
-    public double AreasTrangl(double a, double b, double c) {
+    public double areasTrangl(double a, double b, double c) {
         this.TriangleA = a;
         this.TriangleB = b;
         this.TriangleC = c;
@@ -18,7 +18,7 @@ public class Areas {
 
     }
 
-    public double AreasKectangle(float a, float b) {
+    public double areasKectangle(float a, float b) {
         this.KectangleA = a;
         this.KectangleB = b;
         double S = a * b;
@@ -26,7 +26,7 @@ public class Areas {
 
     }
 
-    public double AreasCircle(float r) {
+    public double areasCircle(float r) {
         this.RadiusR = r;
         double S = PI * pow(r, 2);
         return S;
