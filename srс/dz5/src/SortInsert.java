@@ -1,10 +1,7 @@
 
+public class SortInsert {
 
-
-public class SortInsertArray {
-    public static void main(String[] args) {
-        int[] Array = {10, 5, -6, 14, 15, 4, 4, 47, 8};
-
+    int[] sortInsert(int[] Array) {
         for (int i = 1; i < Array.length; i++) {
             int x = Array[i];
             while (i > 0 && Array[i - 1] > x) {
@@ -12,10 +9,13 @@ public class SortInsertArray {
                 i--;
             }
             Array[i] = x;
-        }
-        for (int element : Array) {
-            System.out.print("  " + element);
 
         }
+        return Array;
+
     }
+
+
 }
+
+
