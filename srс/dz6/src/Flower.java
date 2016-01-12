@@ -17,10 +17,10 @@ public class Flower {
 
     }
 
-    public void collect() throws DamageFlower{
+    public void collect() throws DamageFlowerException {
         if (n==null){
 
-            throw new DamageFlower();
+            throw new DamageFlowerException();
         }
 
 

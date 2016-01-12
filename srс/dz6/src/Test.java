@@ -6,7 +6,7 @@ public class Test {
         try{
             aster.collect();
         }
-        catch (DamageFlower e){
+        catch (DamageFlowerException e){
 
 
         }
