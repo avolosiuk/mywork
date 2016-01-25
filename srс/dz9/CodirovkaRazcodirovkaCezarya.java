@@ -10,6 +10,8 @@ public class CodirovkaRazcodirovkaCezarya {
     char[] symvol = {'.', ' ', ',', ';', ':', '!', '?', '-','[',']','{','}','=','\'',};
 
     public String codCezarya(String Text ) {
+        int kolBukv=26;
+        int kolCyfr=10;
         int k=3 ;
         StringBuilder outText = new StringBuilder();
 
@@ -17,14 +19,14 @@ public class CodirovkaRazcodirovkaCezarya {
             char inTextLetter = Text.charAt(i);
             for (int j = 0; j < Letter.length; j++) {
                 if (inTextLetter == Letter[j]) {
-                    int index = (j + k) % 26;
+                    int index = (j + k) % kolBukv;
                     outText.append(Letter[index]);
                     break;
                 }
             }
             for (int l = 0; l < upLetter.length; l++) {
                 if (inTextLetter == upLetter[l]) {
-                    int index1 = (l + k) % 26;
+                    int index1 = (l + k) % kolBukv;
                     outText.append(upLetter[index1]);
 
                     break;
@@ -32,7 +34,7 @@ public class CodirovkaRazcodirovkaCezarya {
             }
             for (int m = 0; m < numbers.length; m++) {
                 if (inTextLetter == numbers[m]) {
-                    int index1 = (m + k) % 10;
+                    int index1 = (m + k) % kolCyfr;
                     outText.append(numbers[index1]);
 
                     break;
@@ -51,6 +53,8 @@ public class CodirovkaRazcodirovkaCezarya {
         return outText.toString();
     }
     public String razcodCezarya(String Text){
+        int kolBukv=26;
+        int kolCyfr=10;
         int k=3 ;
         StringBuilder outText = new StringBuilder();
 
@@ -59,14 +63,14 @@ public class CodirovkaRazcodirovkaCezarya {
             char inTextLetter = Text.charAt(i);
             for (int j = 0; j < Letter.length; j++) {
                 if (inTextLetter == Letter[j]) {
-                    int index1= (j - k+26) % 26;
+                    int index1= (j - k+kolBukv) % kolBukv;
                     outText.append(Letter[index1]);
                     break;
                 }
             }
             for (int l = 0; l < upLetter.length; l++) {
                 if (inTextLetter == upLetter[l]) {
-                    int index1 = (l - k+26)% 26 ;
+                    int index1 = (l - k+kolBukv)% kolBukv ;
                     outText.append(upLetter[index1]);
 
                     break;
@@ -74,7 +78,7 @@ public class CodirovkaRazcodirovkaCezarya {
             }
             for (int m = 0; m < numbers.length; m++) {
                 if (inTextLetter == numbers[m]) {
-                    int index1 = (m - k+10) % 10;
+                    int index1 = (m - k+kolCyfr) % kolCyfr;
                     outText.append(numbers[index1]);
 
                     break;
